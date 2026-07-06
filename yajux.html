@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>花畑の朝</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      overflow: hidden;
+      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+      background: #f7e8d6;
+    }
+
+    .main {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+
+      /* index.html と同じフォルダに bg0(1).png を置く */
+      background-image: url("bg0.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .message {
+      position: absolute;
+      top: 8%;
+      left: 2.2%;
+      width: 43%;
+      max-width: 720px;
+      min-width: 420px;
+
+      padding: 18px 20px;
+      background: rgba(255, 250, 247, 0.72);
+
+      color: #d4e919;
+      font-size: clamp(22px, 2.2vw, 38px);
+      font-weight: bold;
+      line-height: 1.55;
+    }
+
+    .butterfly {
+      position: absolute;
+      width: clamp(70px, 9vw, 145px);
+      height: auto;
+      pointer-events: none;
+      filter: drop-shadow(2px 3px 3px rgba(0, 0, 0, 0.25));
+    }
+
+    .butterfly1 {
+      left: 39%;
+      top: 66%;
+      transform: rotate(-8deg);
+    }
+
+    .butterfly2 {
+      left: 15%;
+      top: 75%;
+      transform: rotate(8deg);
+    }
+
+    .butterfly3 {
+      left: 62%;
+      top: 81%;
+      transform: rotate(-10deg);
+    }
+
+    .credit {
+      position: absolute;
+      right: 4%;
+      bottom: 2.2%;
+      color: white;
+      font-size: clamp(12px, 1.25vw, 20px);
+      font-weight: bold;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+
+    @media (max-width: 600px) {
+      .message {
+        top: 5%;
+        left: 4%;
+        width: 92%;
+        min-width: 0;
+        padding: 12px;
+        font-size: 18px;
+      }
+
+      .butterfly {
+        width: 65px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="main">
+    <div class="message">
+      ぽかぽか陽気の穏やかな朝<br>
+      花畑では、蝶々がのんびり飛んでいます
+    </div>
+
+    <img src="./butterfly.gif" class="butterfly butterfly1" alt="蝶">
+    <img src="./butterfly.gif" class="butterfly butterfly2" alt="蝶">
+    <img src="./butterfly.gif" class="butterfly butterfly3" alt="蝶">
+
+
+  </main>
+</body>
+</html>
